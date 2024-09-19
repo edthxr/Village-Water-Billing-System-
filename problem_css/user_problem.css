@@ -1,0 +1,576 @@
+:root {
+
+    --whitebg-color: #F3F4F8;
+    --black-color: #181818;
+    --whiteiphone-color: #F2F2F2;
+    --blackanime-color: #212121;
+    ;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0;
+    /* Remove default body margin */
+    background: #212121 !important;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    color: white !important;
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(23px, 3vw, 40px) !important;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    background-color: #181818;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px !important;
+    flex-direction: column;
+    max-width: 100% !important;
+
+
+
+}
+
+.read {
+    background: #f2f2f2;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 30px;
+
+}
+
+
+.submit_record {
+    max-width: 100%;
+
+
+    & h1 {
+        text-align: center;
+    }
+}
+
+form {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+
+
+
+    & label {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50px !important;
+        overflow: hidden;
+
+        /* Hide the overflowing content */
+        & a {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: black;
+            font-size: clamp(23px, 3vw, 32px);
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    }
+
+    .btn_form {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+}
+
+
+textarea,
+#problem_description {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 3px solid #040404;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    resize: none;
+    white-space: nowrap;
+    /* Prevent text from breaking across lines */
+    overflow: auto;
+    /* Add overflow property to enable horizontal scrolling if needed */
+}
+
+
+.btn-primary {
+
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent !important;
+    border: 1px solid rgb(255, 255, 255) !important;
+
+
+}
+
+#submit {
+    color: black;
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+
+    overflow-x: hidden;
+
+
+    &:hover {
+        background: rgb(0, 0, 0) !important;
+        color: white;
+    }
+
+}
+
+#back {
+    color: black;
+    font-size: 16px;
+    white-space: nowrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+
+    overflow-x: hidden;
+
+
+    &:hover {
+        background: rgba(0, 0, 0, 0.537) !important;
+        color: white;
+    }
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    /* Change background color on hover */
+    /* Add any other styling for hover state if needed */
+}
+
+
+@media only screen and (max-width: 520px) {
+    .btn_form {
+        flex-direction: column;
+        /* Change to column layout for smaller screens */
+        align-items: center;
+        width: 100%;
+        /* Set width to 100% */
+        gap: 20px;
+    }
+
+    #submit,
+    #back {
+        width: 100% !important;
+    }
+}
+
+
+
+
+.check_report h2 {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+
+}
+
+
+.check_report {
+    background: #f2f2f2;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+
+#Table {
+    margin: 0 auto;
+}
+
+#Table_wrapper {
+    margin: 0 auto;
+}
+
+#Table {
+    margin: 0 auto;
+    max-width: 100%;
+    /* เพิ่ม max-width เพื่อรักษาขนาดในกรอบของ container */
+
+}
+
+#Table td,
+#Table th {
+    padding: 8px;
+    font-family: 'Prompt', sans-serif !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+#Table td {
+    background: #FFFFFF;
+    max-width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#Table th {
+    background: #F2F2F2;
+    width: 5%;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    /* Adjusted shadow */
+
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa !important;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    background-color: transparent;
+    color: inherit;
+    margin-left: 3px;
+    max-width: 72%;
+    text-indent: 0 !important;
+
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    #Table td,
+    #Table th {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+.edit-btn {
+    background-color: #14cc48;
+    /* เขียว */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.edit-btn:hover {
+    background-color: #26d558;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+.view-btn {
+    background-color: #0071E3;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.view-btn:hover {
+    background-color: #0d00ff;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+/* สีปุ่มลบ */
+.delete-btn {
+    background-color: #e30000;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    /* แดงเข้มเมื่อ hover */
+    color: white;
+}
+
+
+
+.custom-icon {
+    color: black !important;
+    font-size: 30px;
+    margin-right: 10px;
+    /* Changed to margin for better spacing */
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
+    /* Adjusted shadow */
+    padding: 0 10px !important;
+    border-radius: 20px !important;
+    background: white !important;
+
+
+}
+
+/*Hover ในส่วนของช่องในตาราง*/
+#Table tbody tr:hover {
+    background: #F2F2F2;
+
+}
+
+
+/* สีของเซลล์เมื่อ hover */
+#Table tbody tr:hover td {
+    background: #d8d7d7;
+}
+
+
+
+.back-button {
+    font-weight: bold;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-inline: auto;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+    /* Adjusted shadow */
+}
+
+.back-button:hover {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: inherit !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px !important;
+    background: #ffffff !important;
+}
+
+table.dataTable thead>tr>th.sorting_asc:before,
+table.dataTable thead>tr>th.sorting_desc:after,
+table.dataTable thead>tr>td.sorting_asc:before,
+table.dataTable thead>tr>td.sorting_desc:after {
+    opacity: .6;
+    max-width: 100%;
+    color: black;
+}
+
+@media (max-width : 995px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #Table thead {
+        display: none;
+    }
+
+    #Table,
+    #Table tbody,
+    #Table tr,
+    #Table td {
+        display: block;
+        max-width: 100%;
+
+        gap: 30px;
+    }
+
+    #Table tr {
+        padding-bottom: 20px;
+        background-color: #f2f2f2;
+
+    }
+
+    #Table tbody tr {
+
+        flex-direction: column;
+        /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+    }
+
+    #Table tbody tr td {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: #FFFFFF;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #Table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        transform: translateY(-50%);
+        top: 50%;
+
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+
+        padding: 12px 32px;
+        max-width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+
+    }
+}
+
+
+
+@media (max-width : 450px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width : 360px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+
+.delete-btn {
+    padding: 5px 10px;
+    background-color: #8a8a8a; /* สีปุ่ม */
+    color: white; /* สีข้อความ */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #434343; /* เปลี่ยนสีเมื่อเมาส์ hover */
+}
+
+/* ปรับรูปแบบข้อความภายในปุ่ม */
+.delete-btn i {
+    margin-right: 5px; /* ระยะห่างของไอคอนกับข้อความ */
+}
+
+
+
+
+/*-------------------footer-----------------*/
+.footer {
+    margin-top: 25px !important;
+    padding: 50px 15% 10px;
+    color: #777;
+    background: #181818 !important;
+    margin-top: auto;
+    border-bottom: 6px solid #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: end;
+
+}

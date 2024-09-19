@@ -1,0 +1,395 @@
+
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Prompt', sans-serif !important;
+}
+
+.font-header {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+    
+  }
+.h1{
+    color: #343a40;
+    margin-bottom: 15px;
+    animation: fadeInUp 0.5s ease-in-out;
+    letter-spacing: 0.1;
+
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #23242a;
+    background-image: url('https://sv1.img.in.th/aw2Ef7.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    
+}
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container{
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+  
+
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container form{
+    position: absolute;
+    inset:4px;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.5s ease-in-out;
+ 
+
+}
+
+.container form h2{
+    color:black;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.container form .input-box{
+    position: relative;
+    width: 300px;
+    margin-top: 35px;
+
+}
+
+.container form .input-box input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #000000;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+
+}
+.container form .input-box label {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+.container form .input-box input:valid ~ label,
+.container form .input-box input:focus ~ label {
+    color: black;
+    font-size: 0.9em;
+    transform: translateY(-34px);
+}
+
+.container form .input-box input:not(:placeholder-shown) ~ label {
+    color: rgb(0, 0, 0);
+    font-size: 0.5em;
+    transform: translateY(-36px);
+}
+input::placeholder {
+    color: #999; /* สีของ placeholder */
+    font-size: small;
+}
+
+/* เลือก placeholder ใน textarea */
+textarea::placeholder {
+    color: #777;
+    
+
+}
+
+/* เลือก placeholder ของ select */
+select::placeholder {
+    color: #888;
+
+}
+.container form .input-box i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(188, 188, 188);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+
+.container form .input-box input:focus ~ i,
+.container form .input-box input:not(:placeholder-shown) {
+    height: 44px;
+
+}
+
+.container form .link{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.container form .link a{
+    margin:10px 0;
+    font-size: 0.75em;
+    color: #3a3a3a;
+    text-decoration: none;
+}
+.container form .link a:hover,
+.container form .link a:nth-child(2){
+    color: black;
+}
+
+.container form .btn {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.6em;
+    border-radius: 4px;
+    font-weight: 600;
+   
+    margin-top: 10px;
+    font: bold;
+    color: white;
+
+}
+
+.input-box .o i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(188, 188, 188);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container form .input-box i {
+   color: #000000;
+}
+
+.container form .input-box input:focus ~ .o i{
+
+    height: 40px;
+
+}
+.container form .link{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.container form .link a{
+
+    font-size: 0.9em;
+    color: black;
+    text-decoration: none;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+.container form .link a{
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+.link a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: #272727;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0)
+}
+.link a:hover::after
+{
+    transform: scaleX(1)
+}
+
+.container form .link a:hover,
+.container form .link a:nth-child(2){
+    color: black;
+}
+
+body::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.btn{
+    font-size: 15px !important;
+    border-radius: 8px !important; 
+    margin-top: 18px !important;
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #151515;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 0px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffffff;
+    border-top-color: #151515;
+    border-bottom-color: #151515;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+/*--------------------------------------------------------------
+# หน้าจอสำหรับโทรศัพท์
+--------------------------------------------------------------*/
+

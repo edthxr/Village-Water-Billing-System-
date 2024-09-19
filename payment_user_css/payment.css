@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+
+
+.qr-code img {
+    max-width: 100%; /* กำหนดขนาดภาพให้ไม่เกินความกว้างของพื้นที่ในฟอร์ม */
+    height: auto; /* จะทำให้รูปภาพยืดหยุ่นตามอัตราส่วน */
+}
+/* navbar*/
+
+body {
+
+    background-color: #F5F5F7 !important;
+    max-width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+/* main */
+.main {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* unpaid payment section */
+.payment_unpaid {
+    max-width: 100%;
+    text-align: center;
+    padding: 40px;
+    color: black;
+    margin-bottom: 10px;
+
+    & a {
+
+        font-size: 28px;
+        font-weight: 700;
+    }
+
+    & p {
+        margin: 0;
+        padding: 0;
+        font-size: 21px;
+        font-weight: 500;
+    }
+}
+
+/* payment container */
+.payment-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 85%;
+    margin: 0 auto;
+    gap: 30px;
+}
+.payment-form {
+    border: 2px solid #fff;
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background: linear-gradient(to right top, #FFFFFF 0%, #FFFFFF 89%, #0071E3 93%, #0071E3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.315);
+    transition: transform 0.4s, box-shadow 0.3s;
+    margin: 0 !important;
+    padding-bottom: 20px  !important;
+    width: 320px;
+    
+    & span{
+        margin-left: 5px;
+    }
+    & p {
+        flex: 1;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        color: #6e6e73;
+        font-weight: 500;
+        max-width: 100%;
+
+        &:nth-child(1) {
+            font-weight: 700;
+            font-size: 22px;
+            color: black;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &:nth-child(2), 
+        &:nth-child(3), 
+        &:nth-child(4), 
+        &:nth-child(6), 
+        &:nth-child(5) {
+     
+            padding: 0 10px;
+    }
+    
+    }
+    &:hover {
+        transform: scale(1.01);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced box shadow */
+  
+    }
+
+    &:hover a {
+        opacity: 1;
+
+    }
+
+}
+.viewimage {
+    background-color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+}
+/* paid and unpaid colors */
+.paid {
+    color: #4caf50;
+}
+
+.unpaid {
+    color: #f44336;
+}
+
+/* modal body */
+.modal-body {
+    max-width: 350px;
+    margin: auto;
+}
+
+.btn-primary {
+    border-radius: 10px !important;
+    background-color: #0071E3 !important; /* Blue color */
+    color: #FFFFFF; /* White text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    text-decoration: none; /* Remove underline for links */
+    display: inline-block;
+    transition: background-color 0.3s;
+    font-size: 17px !important;
+}
+
+.btn-primary:hover {
+    background-color: rgb(33, 71, 209) !important; /* Blue color */
+}
+
+
+/*-------------------footer-----------------*/
+.footer {
+    margin-top: 25px !important;
+    padding: 50px 15% 10px;
+    color: #777;
+    background: #FFFFFF !important;
+    margin-top: auto;
+    border-top: 1px solid rgba(149, 149, 149, 0.5);
+    display: flex;
+    align-items: end;
+
+}

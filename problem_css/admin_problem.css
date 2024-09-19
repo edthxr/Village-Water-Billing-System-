@@ -1,0 +1,404 @@
+:root {
+    --whitebg-color: #C2C3C6;
+    --black-color: #181818;
+    --whiteiphone-color: #F2F2F2;
+    --blackanime-color: #212121;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0; /* Remove default body margin */
+    background: #181818e5 !important;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h1 {
+    color: white !important;
+    text-align: center;
+    font-weight: 700;
+    font-size: clamp(23px, 3vw, 40px) !important;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    background-color: #181818;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 50px !important;
+    flex-direction: column;
+    max-width: 100% !important;
+}
+
+
+
+.submit_record {
+    max-width: 100%;
+
+    & h1 {
+        text-align: center;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    gap: 20px;
+
+    & label {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 50px !important;
+        overflow: hidden;
+
+        & a {
+            max-width: 100%;
+            width: 100%;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            color: black;
+            font-size: clamp(23px, 3vw, 32px);
+            font-weight: bold;
+            padding: 0 10px;
+        }
+    }
+
+    .btn_form {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        gap: 20px;
+    }
+}
+
+.icon-edit {
+    color: black !important;
+    font-size: 30px;
+    margin-right: 10px;
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
+    padding: 0 10px !important;
+    border-radius: 20px !important;
+    background: white !important;
+}
+
+textarea,
+#problem_description {
+    width: 100%;
+    height: 250px;
+    box-sizing: border-box;
+    padding: 15px;
+    border: 3px solid #040404;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    resize: none;
+    white-space: nowrap;
+    overflow: auto;
+}
+
+.btn-primary {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background: transparent !important;
+    border: 1px solid rgb(255, 255, 255) !important;
+}
+
+.edit-btn {
+    background-color: #24BF4F;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    border: 1px solid transparent !important;
+}
+
+.edit-btn:hover {
+    background-color: #26d558;
+    color: white;
+}
+
+#save {
+    cursor: pointer;
+    color: black;
+    background-color: #ffffff !important;
+    border-color: #f3f3f3 !important;
+    border-radius: 12px !important;
+    font-weight: 600;
+
+    &:hover {
+        background: #181818 !important;
+        color: white !important;
+    }
+}
+
+#close {
+    color: black;
+    background-color: #ffffff !important;
+    border-color: #f3f3f3 !important;
+    border-radius: 12px !important;
+
+    &:hover {
+        background: #595959 !important;
+        color: white !important;
+    }
+}
+
+.delete-btn {
+    background-color: #e30000;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    border: 1px solid transparent !important;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    color: white;
+}
+
+@media only screen and (max-width: 792px) {
+    .btn_form {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    #submit,
+    #back {
+        width: 100% !important;
+    }
+}
+
+.check_report h2 {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+}
+
+.check_report {
+    background: #f2f2f2;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-top: 100px !important;
+
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+
+#Table {
+    margin: 0 auto;
+}
+
+#Table_wrapper {
+    margin: 0 auto;
+}
+
+#Table {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#Table td,
+#Table th {
+    padding: 8px;
+    font-family: 'Prompt', sans-serif !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+#Table td {
+    background: #FFFFFF;
+    max-width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#Table th {
+    background: #F2F2F2;
+    width: 10%;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa !important;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    background-color: transparent;
+    color: inherit;
+    margin-left: 3px;
+    max-width: 72%;
+    text-indent: 0 !important;
+}
+
+.back-button {
+    font-weight: bold;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-inline: auto;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+}
+
+.back-button:hover {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+}
+/*Hover ในส่วนของช่องในตาราง*/
+#Table tbody tr:hover {
+    background: #F2F2F2 !important;
+
+}
+
+
+/* สีของเซลล์เมื่อ hover */
+#Table tbody tr:hover td {
+    background: #d8d7d7 !important;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: inherit !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px !important;
+    background: #ffffff !important;
+    max-width: 100%;
+}
+
+@media (max-width : 1024px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #Table thead {
+        display: none;
+    }
+
+    #Table,
+    #Table tbody,
+    #Table tr,
+    #Table td {
+        display: block;
+        max-width: 100%;
+    }
+
+    #Table tr {
+        padding-bottom: 20px;
+        background-color: var(--whiteiphone-color);
+    }
+
+    #Table tbody tr {
+        flex-direction: column;
+    }
+
+    #Table tbody tr td {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: white;
+        max-width: 100%;
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #Table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        transform: translateY(-50%);
+        top: 50%;
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 12px 32px;
+        max-width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+
+
+/*-------------------footer-----------------*/
+.footer {
+    margin-top: 25px !important;
+    padding: 50px 15% 10px;
+    color: #777;
+    background: #181818 !important;
+    margin-top: auto;
+    border-bottom: 6px solid #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: end;
+
+}

@@ -1,0 +1,248 @@
+/* user_list_css/user_edit.css */
+
+body {
+    font-family: 'Prompt', sans-serif !important;
+    background: linear-gradient(to bottom, #F8F8F8, #D1D1D1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    color: #333; 
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.font-header {
+    max-width: 100%;
+    padding: 10px 0;
+}
+.font-header h2 {
+    color: #202020;
+    animation: fadeInUp 0.5s ease-in-out;
+    letter-spacing: 0.1;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container {
+    background:  #F2F2F2; /* สีธีมหรือระบบน้ำประปา */
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px 20px 20px 20px;
+    max-width: 600px;
+    border: 1px solid#ffffff;
+    animation: fadeIn 1s forwards;
+
+    box-shadow: 0 0 10px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.user-form {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    align-content: start; /* เพิ่มบรรทัดนี้ */
+    gap: 10px;
+
+
+}
+
+
+.form-column {
+    padding: 10px;
+    margin-bottom: 0px;
+    border: 2px black;
+    background: #FFFFFF;
+    max-width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    display: block;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 0.1;
+    width: 50%;
+    max-width: 100%;
+}
+
+input {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    transition: color 0.3s ease, transform 0.3s ease; 
+    border: none;
+    font-family: 'Prompt', sans-serif !important;
+   
+    
+}
+
+.input-container {
+    position: relative;
+}
+.input-container input {
+    padding-left: 10px; /* เพิ่มพื้นที่ข้างซ้ายของ input */
+}
+
+
+
+
+
+.button-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    align-content: start; /* เพิ่มบรรทัดนี้ */
+    gap: 10px;
+
+
+
+    
+}
+.button-style,
+.cancel-style {
+    /* สไตล์ของปุ่มทั่วไป */
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+.custom-icon {
+    font-size: 30px;
+    color: #000000;
+    margin-right: 10px; /* Changed to margin for better spacing */
+  
+    padding: 0 5px;
+    border-radius: 10px;
+ 
+
+}
+.btnsave,.btncancel{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.button-style.green {
+    color: black;
+    width: 100%;
+    font-weight: bold;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.button-style.green:hover{
+    background: black;
+}
+
+.button-style.red {
+    color: black;
+    width: 100%;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+
+
+}
+.button-style.blue{
+    color: white;
+    background-color: #333;
+    border-radius: 12px;
+    width: 100%;
+}
+
+.icon-edit{
+    font-size: 30px;
+
+    padding: 0 20px;
+ 
+
+    
+}
+.hidden {
+    display: none;
+}
+
+.error{
+    color: #ffffff !important; /* เปลี่ยนเป็นสีขาว */
+    max-width: 100%;
+    font-size: 21px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-align: center;
+    background: #4caf50; /* เปลี่ยนเป็นสีเขียว */
+    margin-top: 15px;
+    border-radius: 10px;
+    padding: 10px 0px 10px 0px;    
+}
+
+.button-style:hover {
+    background-color: #555;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+}
+.ganderinput{
+    width: 100%;
+    display: flex;
+    
+}
+.form-column input{
+    width: 100%;
+}
+
+.form-column label{
+    max-width: 50%;
+}
+.swal2-popup {
+    font-size: 16px;
+}
+
+
+.ganderinput input{
+    max-width: 20px;
+}

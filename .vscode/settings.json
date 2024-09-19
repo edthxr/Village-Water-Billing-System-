@@ -1,0 +1,9 @@
+{
+    "editor.fontFamily": "JetBrains Mono",
+    "editor.fontSize": 15,
+    "editor.letterSpacing": 0.1,
+    "editor.lineHeight": 1.5,
+    "editor.cursorBlinking": "smooth",
+    "liveServer.settings.port": 5501,
+
+}

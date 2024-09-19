@@ -1,0 +1,745 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    min-height: 100vh !important;
+
+    /* Remove default body margin */
+    background: #F5F5F7 !important;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ลบ background-image */
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to specific elements */
+.container,
+#Table {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+}
+
+/* Apply fade-in animation to table rows */
+#Table tbody tr {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+    transition: background 0.3s;
+    /* Add a smooth transition effect for the background color change */
+}
+
+/* Apply fade-in animation to buttons */
+.edit-btn,
+.view-btn,
+.delete-btn,
+.back-button,
+.btn-secondary {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+}
+
+/* Apply fade-in animation to custom icons */
+
+/* Hover effect for buttons */
+.edit-btn:hover,
+.view-btn:hover,
+.delete-btn:hover,
+.back-button:hover,
+.btn-secondary:hover {
+    opacity: 0.3;
+    /* Adjust the opacity on hover */
+}
+
+/*------------------------------------อนิเมชั่น-end------------------------------------------------------------*/
+
+
+.user_list h2 {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+    
+}
+
+
+.user_list {
+    background: #f2f2f2;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 100px !important;
+}
+
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+
+#Table {
+    margin: 0 auto;
+}
+
+#Table_wrapper {
+    margin: 0 auto;
+}
+
+#Table {
+    margin: 0 auto;
+    max-width: 100%;
+    /* เพิ่ม max-width เพื่อรักษาขนาดในกรอบของ container */
+
+}
+
+#Table td,
+#Table th {
+    padding: 8px;
+    font-family: 'Prompt', sans-serif !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+#Table td {
+    background: #FFFFFF;
+    max-width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#Table th {
+    background: #F2F2F2;
+    width: 5%;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    /* Adjusted shadow */
+
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    #Table td,
+    #Table th {
+        padding: 5px;
+        /* Adjust the padding for smaller screens */
+        font-size: 14px;
+        /* Adjust the font size for smaller screens */
+    }
+}
+
+.edit-btn {
+    background-color: #24BF4F;
+    /* เขียว */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.edit-btn:hover {
+    background-color: #26d558;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+.view-btn {
+    background-color: #0071E3;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.view-btn:hover {
+    background-color: #0d00ff;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+/* สีปุ่มลบ */
+.delete-btn {
+    background-color: #e30000;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    /* แดงเข้มเมื่อ hover */
+    color: white;
+}
+
+
+
+.custom-icon {
+    color: black !important;
+    font-size: 30px;
+    margin-right: 10px;
+    /* Changed to margin for better spacing */
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
+    /* Adjusted shadow */
+    padding: 0 10px !important;
+    border-radius: 20px !important;
+    background: white !important;
+
+
+}
+
+/*Hover ในส่วนของช่องในตาราง*/
+#Table tbody tr:hover {
+    background: #F2F2F2;
+
+}
+
+
+/* สีของเซลล์เมื่อ hover */
+#Table tbody tr:hover td {
+    background: #d8d7d7;
+}
+.back-button {
+    font-weight: bold;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-inline: auto;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+    /* Adjusted shadow */
+}
+
+.back-button:hover {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: inherit !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px !important;
+    background: #ffffff !important;
+}
+
+table.dataTable thead>tr>th.sorting_asc:before,
+table.dataTable thead>tr>th.sorting_desc:after,
+table.dataTable thead>tr>td.sorting_asc:before,
+table.dataTable thead>tr>td.sorting_desc:after {
+    opacity: .6;
+    max-width: 100%;
+    color: black;
+}
+
+
+
+@media (max-width : 768px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #Table thead {
+        display: none;
+    }
+
+    #Table,
+    #Table tbody,
+    #Table tr,
+    #Table td {
+        display: block;
+        max-width: 100%;
+
+        gap: 30px;
+    }
+
+    #Table tr {
+        padding-bottom: 20px;
+        background-color:#f2f2f2;
+
+    }
+
+    #Table tbody tr {
+
+        flex-direction: column;
+        /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+    }
+
+    #Table tbody tr td {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: #FFFFFF;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #Table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        transform: translateY(-50%);
+        top: 50%;
+
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+
+        padding: 12px 32px;
+        max-width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+
+    }
+}
+
+
+
+@media (max-width : 450px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width : 360px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+
+/*------------------------------------------------modal end--------------------------------------------------------*/
+
+
+
+/* navbar*/
+
+/* navbar*/
+
+nav {
+    background-color: #FFFFFF;
+    box-shadow: 3px 3px 5px rgba (0, 0, 0, 0.1);
+    font-family: 'Prompt', sans-serif;
+    max-width: 100%;
+
+
+
+    & ul {
+        max-width: 100%;
+        list-style: none;
+        display: flex;
+        margin: 0 auto;
+
+    }
+
+    & li {
+        height: 80px;
+        max-width: 100%;
+
+        &:nth-child(1) {
+            margin-right: 50px;
+
+            &:hover {
+                text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        &:nth-child(2),
+        &:nth-child(7) {
+            & a {
+                color: black;
+                font-weight: bold;
+                /* Change this to your desired color value */
+            }
+
+
+        }
+
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6) {
+            & a {
+
+
+                margin-right: 20px;
+                position: relative;
+                text-decoration: none;
+                font-size: 1em;
+                color: black;
+
+
+
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    bottom: 23px;
+                    width: 100%;
+                    height: 1px;
+                    background-color: black;
+                    transform: scaleX(0);
+                    transition: transform 0.4s ease-in-out;
+                    transform-origin: left;
+                }
+
+                &:hover::before {
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+        &:nth-child(7),
+        &:nth-child(8) {
+            margin-left: auto;
+
+            &:hover {
+                text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.8);
+            }
+
+        }
+
+        &:nth-child(8) {
+            font-size: 30px;
+
+        }
+
+        & a {
+            height: 100%;
+
+            text-decoration: none !important;
+            display: flex;
+            align-items: center;
+            color: black;
+            font-weight: 100;
+            white-space: nowrap;
+            flex-shrink: 1;
+            min-width: 0;
+            overflow-x: hidden;
+
+
+            &:hover {
+                color: black;
+            }
+
+        }
+
+
+    }
+
+}
+
+.containernav {
+    max-width: 95%;
+    margin: 0 auto;
+
+    & li:nth-child(1) a {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+
+}
+
+.menu-button {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 50;
+    background: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    cursor: pointer;
+    padding-left: 20px;
+
+    & li {
+        width: 100%;
+        text-align: center;
+    }
+
+    & a {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+
+@media (max-width :923px) {
+    .hideOnMoblie {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width :800px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width :923px) {
+    .hideOnMoblie {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+@media (max-width :800px) {
+    .sidebar {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.modal-header,.modal-footer{
+display: none !important;
+
+
+}
+.modal-content {
+    border-radius: 30px !important;
+    width: 750px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    left: -128;
+    @media (max-width: 768px) {
+        width: 100% !important;
+        left: 0 !important; /* Set left to 0 for responsiveness */
+    }
+  
+}
+
+.con-modal{
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #F2F2F2;
+    border-radius: 20px;
+    padding: 40px!important;
+    box-shadow: 0 2px 20px -5px rgba(0, 0, 0, 0.5);
+    /* Check if these properties are causing the issue */
+}
+
+.user-card{
+    margin-bottom: 20px;
+}
+
+.user-card-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-content: start;
+    gap: 10px;
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+.form-column {
+    padding: 10px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* Adjust to column layout */
+    align-items: center !important;
+    text-align: left;
+    @media (max-width: 768px) {
+        width: 100% !important; /* Adjust the width as needed */
+    }
+}
+
+.btnsave {
+    max-width: 100%;
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.button-style.green {
+    color: black;
+    width: 20%;
+    font-weight: bold;
+    border-radius: 10px;
+    background: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    &:hover{
+        background-color: black;
+        color: white;
+        text-decoration: none;
+    }
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+}
+
+.button-style {
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+.form-column p {
+    display: block;
+    color: black;
+    letter-spacing: 0.1;
+    text-align: left !important;
+    max-width: 100%; /* Limit the maximum width */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Show ellipsis (...) for overflowed text */
+    margin: 0; /
+}
+
+.form-column p span {
+    font-weight: 700;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa !important;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    background-color: transparent;
+    color: inherit;
+    margin-left: 10px !important;
+    max-width: 72%;
+    text-indent: 0 !important;
+ 
+
+}
+
+/*-------------------footer-----------------*/
+.footer {
+    margin-top: 25px !important;
+    padding: 50px 15% 10px;
+    color: #777;
+    background: #FFFFFF !important;
+    margin-top: auto;
+
+    border-top: 1px solid rgba(149, 149, 149, 0.5);
+    display: flex;
+    align-items: end;
+
+}

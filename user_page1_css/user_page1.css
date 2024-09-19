@@ -1,0 +1,549 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0; /* Remove default body margin */
+    background: #212121 !important;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content{
+ width: 50px;
+ height: auto;
+ 
+}
+.btn-close{
+    width: 30px;
+    height: 30px;
+    font-weight: bold;
+    background: #ffffff;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+
+}
+@keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+#chartModalLabel{
+    margin: 0 auto;
+}
+#myBarChart{
+    max-width: 100%;
+}
+@media (max-width: 767px) {
+    .modal-content {
+        width: 90%; /* ปรับความกว้างให้เต็มขอบหน้าจอของโทรศัพท์ */
+        max-width: 100%; /* ปรับให้ความกว้างสูงสุดเท่ากับหน้าจอของโทรศัพท์ */
+        height: 100%;
+    }
+
+
+}
+
+.font-header {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #0071E3;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px 12px 0px 0px;
+    margin-top: 20px !important;
+}
+
+.font-header h2{
+    text-align: center;
+    color: white;
+    padding: 0;
+    margin: 0;
+    
+ 
+}
+
+
+.user_details1{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    align-content: center; /* เพิ่มบรรทัดนี้ */
+    gap: 10px;
+    justify-content: center;
+    border: 2px black;
+    background-color: white;
+    max-width: 100%;
+    padding: 20px 20px 20px 20px;
+    text-align: left ;
+    background: #f2f2f2;
+    width: 90% ;
+    padding: 20px;
+    border-radius: 0px 0px 12px 12px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+
+    
+    
+}
+
+
+
+.user_details1 p {
+    white-space: nowrap;
+    max-width: 100%;
+    
+
+}
+
+.custom-icon {
+    font-size: 30px;
+    color: #000000;
+    margin-right: 10px; /* Changed to margin for better spacing */
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Adjusted shadow */
+    padding: 0 5px;
+    border-radius: 10px;
+}
+
+
+
+/*-----------หน้าจอสำหรับมือถือ ในส่วนของรายละเอียดผู้ใช้ สำหรับตัดคอลัั่มลงมา หากหน้าจอเล็ก------------------------------------------*/
+
+@media (max-width: 1400px) {
+    .user_details1 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 1200px) {
+    .user_details1 {
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #F2F2F2 !important;
+        
+    }
+    .form-column {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: #FFFFFF;
+        max-width: 100%;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width: 920px) {
+    .user_details1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .user_details1 {
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .container{
+        margin-top: 50px !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .user_details1 {
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 100%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .user_details1 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+@media (max-width: 320px) {
+    .user_details1 {
+        grid-template-columns: repeat(1, 1fr);
+        font-size: 12px;
+    }
+}
+
+/*-------------------------------end-------------------------------------------------*/
+
+
+
+.history h2 {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+
+}
+
+
+.history {
+    background: #f2f2f2;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+
+#Table {
+    margin: 0 auto;
+}
+
+#Table_wrapper {
+    margin: 0 auto;
+}
+
+#Table {
+    margin: 0 auto;
+    max-width: 100%;
+    /* เพิ่ม max-width เพื่อรักษาขนาดในกรอบของ container */
+
+}
+
+#Table td,
+#Table th {
+    padding: 10px;
+    font-family: 'Prompt', sans-serif !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+#Table td {
+    background: #FFFFFF;
+    max-width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#Table th {
+    background: #F2F2F2;
+    width: 15%;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    /* Adjusted shadow */
+
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa !important;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    background-color: transparent;
+    color: inherit;
+    margin-left: 3px;
+    max-width: 72%;
+    text-indent: 0 !important;
+
+}
+
+
+
+
+@media only screen and (max-width: 900px) {
+
+    #Table td,
+    #Table th {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+.edit-btn {
+    background-color: #14cc48;
+    /* เขียว */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.edit-btn:hover {
+    background-color: #26d558;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+.view-btn {
+    background-color: #0071E3;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.view-btn:hover {
+    background-color: #0d00ff;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+/* สีปุ่มลบ */
+.delete-btn {
+    background-color: #e30000;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    /* แดงเข้มเมื่อ hover */
+    color: white;
+}
+
+
+
+.custom-icon {
+    color: black !important;
+    font-size: 30px;
+    margin-right: 10px;
+    /* Changed to margin for better spacing */
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
+    /* Adjusted shadow */
+    padding: 0 10px !important;
+    border-radius: 20px !important;
+    background: white !important;
+
+
+}
+
+/*Hover ในส่วนของช่องในตาราง*/
+#Table tbody tr:hover {
+    background: #F2F2F2;
+
+}
+
+
+/* สีของเซลล์เมื่อ hover */
+#Table tbody tr:hover td {
+    background: #d8d7d7;
+}
+
+
+
+.back-button {
+    font-weight: bold;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-inline: auto;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+    /* Adjusted shadow */
+}
+
+.back-button:hover {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: inherit !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px !important;
+    background: #ffffff !important;
+}
+
+table.dataTable thead>tr>th.sorting_asc:before,
+table.dataTable thead>tr>th.sorting_desc:after,
+table.dataTable thead>tr>td.sorting_asc:before,
+table.dataTable thead>tr>td.sorting_desc:after {
+    opacity: .6;
+    max-width: 100%;
+    color: black;
+}
+
+@media (max-width : 995px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #Table thead {
+        display: none;
+    }
+
+    #Table,
+    #Table tbody,
+    #Table tr,
+    #Table td {
+        display: block;
+        max-width: 100%;
+
+        gap: 30px;
+    }
+
+    #Table tr {
+        padding-bottom: 20px;
+        background-color: #f2f2f2;
+
+    }
+
+    #Table tbody tr {
+
+        flex-direction: column;
+        /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+    }
+
+    #Table tbody tr td {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: #FFFFFF;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #Table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        transform: translateY(-50%);
+        top: 50%;
+
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+
+        padding: 12px 32px;
+        max-width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+
+    }
+}
+
+
+
+@media (max-width : 450px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width : 360px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+
+
+
+
+
+/*-------------------footer-----------------*/
+.footer {
+    margin-top: 25px !important;
+    padding: 50px 15% 10px;
+    color: #777;
+    background: #181818 !important;
+    margin-top: auto;
+    border-bottom: 6px solid #333;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: end;
+
+}

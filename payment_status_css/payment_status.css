@@ -1,0 +1,401 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif !important;
+}
+
+body {
+    min-height: 100vh !important;
+    margin: 0;
+    /* Remove default body margin */
+    background: #F5F5F7 !important;
+    overflow-x: hidden;
+    /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/*------------------------------------อนิเมชั่น-start------------------------------------------------------------*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation to specific elements */
+.container,
+#Table {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+}
+
+/* Apply fade-in animation to table rows */
+#Table tbody tr {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+    transition: background 0.3s;
+    /* Add a smooth transition effect for the background color change */
+}
+
+/* Apply fade-in animation to buttons */
+.edit-btn,
+.view-btn,
+.delete-btn,
+.back-button,
+.btn-secondary {
+    animation: fadeIn 0.3s ease-in-out;
+    /* Adjust the animation duration and timing function as needed */
+}
+
+/* Apply fade-in animation to custom icons */
+
+/* Hover effect for buttons */
+.edit-btn:hover,
+.view-btn:hover,
+.delete-btn:hover,
+.back-button:hover,
+.btn-secondary:hover {
+    opacity: 0.3;
+    /* Adjust the opacity on hover */
+}
+
+/*------------------------------------อนิเมชั่น-end------------------------------------------------------------*/
+
+
+.waterusage h2 {
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 24px;
+
+}
+
+
+.waterusage {
+    background: #f2f2f2;
+    margin-top: 100px !important;
+    width: 90% !important;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgb(255, 241, 241);
+    border: 2px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.waterusage:nth-of-type(2) {
+    margin-top: 0 !important;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+}
+
+#Table {
+    margin: 0 auto;
+
+}
+
+#Table_wrapper {
+    margin: 0 auto;
+}
+
+#Table {
+    margin: 0 auto;
+    max-width: 100%;
+    /* เพิ่ม max-width เพื่อรักษาขนาดในกรอบของ container */
+
+}
+
+#Table td,
+#Table th {
+    padding: 8px;
+    font-family: 'Prompt', sans-serif !important;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+}
+
+#Table td {
+    background: #FFFFFF;
+    max-width: 100%;
+    position: relative;
+    white-space: nowrap;
+}
+
+#Table th {
+    background: #F2F2F2;
+    width: 5%;
+    cursor: pointer;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+    /* Adjusted shadow */
+
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border: 1px solid #aaa !important;
+    border-radius: 10px !important;
+    padding-left: 20px !important;
+    background-color: transparent;
+    color: inherit;
+    margin-left: 10px !important;
+    max-width: 72%;
+    text-indent: 0 !important;
+ 
+
+}
+
+
+
+@media only screen and (max-width: 900px) {
+
+    #Table td,
+    #Table th {
+        padding: 5px;
+        font-size: 14px;
+    }
+}
+
+.edit-btn {
+    background-color: #0071E3;
+    /* เขียว */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    
+}
+
+.edit-btn:hover {
+    background-color: #0f1b9e;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+.view-btn {
+    background-color: #0071E3;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.view-btn:hover {
+    background-color: #0d00ff;
+    /* เขียวเข้มเมื่อ hover */
+    color: white;
+}
+
+/* สีปุ่มลบ */
+.delete-btn {
+    background-color: #e30000;
+    /* แดง */
+    color: #fff;
+    /* ขาว */
+    padding: 6px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    /* Adjusted shadow */
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    /* แดงเข้มเมื่อ hover */
+    color: white;
+}
+
+
+
+.custom-icon {
+    color: black !important;
+    font-size: 30px;
+    margin-right: 10px;
+    /* Changed to margin for better spacing */
+    margin-right: 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4) !important;
+    /* Adjusted shadow */
+    padding: 0 10px !important;
+    border-radius: 20px !important;
+    background: white !important;
+
+
+}
+
+/*Hover ในส่วนของช่องในตาราง*/
+#Table tbody tr:hover {
+    background: #F2F2F2;
+
+}
+
+
+/* สีของเซลล์เมื่อ hover */
+#Table tbody tr:hover td {
+    background: #d8d7d7;
+}
+
+
+
+.back-button {
+    font-weight: bold;
+    display: inline-block;
+    background: #ffffff;
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-inline: auto;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0 0 6px rgba(105, 105, 105, 0.4);
+    /* Adjusted shadow */
+}
+
+.back-button:hover {
+    background-color: black;
+    text-decoration: none;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current,
+.dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+    color: inherit !important;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 15px !important;
+    background: #ffffff !important;
+}
+
+table.dataTable thead>tr>th.sorting_asc:before,
+table.dataTable thead>tr>th.sorting_desc:after,
+table.dataTable thead>tr>td.sorting_asc:before,
+table.dataTable thead>tr>td.sorting_desc:after {
+    opacity: .6;
+    max-width: 100%;
+    color: black;
+}
+
+@media (max-width : 995px) {
+    .container {
+        margin-top: 0;
+    }
+
+    #Table thead {
+        display: none;
+    }
+
+    #Table,
+    #Table tbody,
+    #Table tr,
+    #Table td {
+        display: block;
+        max-width: 100%;
+
+        gap: 30px;
+    }
+
+    #Table tr {
+        padding-bottom: 20px;
+        background-color: #f2f2f2;
+
+    }
+
+    #Table tbody tr {
+
+        flex-direction: column;
+        /* เปลี่ยนจากแนวนอนเป็นแนวตั้ง */
+    }
+
+    #Table tbody tr td {
+        padding: 10px;
+        margin-bottom: 0px;
+        border: 2px black;
+        background: #FFFFFF;
+        max-width: 100%;
+
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        margin: 0px 0;
+        max-width: 100%;
+    }
+
+    #Table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        text-align: left;
+        padding: 5px;
+        padding-left: 15px;
+        font-weight: 600;
+        font-size: 14px;
+        text-align: left;
+        transform: translateY(-50%);
+        top: 50%;
+
+    }
+
+    label {
+        margin-bottom: 20px;
+    }
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+
+        padding: 12px 32px;
+        max-width: 100%;
+    }
+
+    .back-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+
+    }
+}
+
+
+
+@media (max-width : 450px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}
+
+@media (max-width : 360px) {
+
+    .edit-btn,
+    .view-btn,
+    .delete-btn {
+        padding: 10px 20px;
+        font-size: 15px;
+        max-width: 100%;
+
+    }
+}

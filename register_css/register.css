@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=FAMILY_NAME:wght@WEIGHT_OR_RANGE&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: 'Prompt', sans-serif !important;
+}
+
+
+/* เพิ่ม fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #23242a;
+    background-image: url('https://sv1.img.in.th/aw2Ef7.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 10;
+
+    
+}
+
+
+body::before{
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    background-color: #1c1c1c;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+   
+  
+
+}
+.container::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 680px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.container::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 680px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.borderLine{
+    position: absolute;
+    top: 0;
+    inset: 0;
+}
+.borderLine::before{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 680px;
+    background: linear-gradient(0deg,transparent,transparent,#ffffff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -1.5s;
+}
+.borderLine::after{
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 480px;
+    height: 680px;
+    background: linear-gradient(0deg,transparent,transparent,#fff,#fff,#fff);
+    z-index: 1;
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -4.5s;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.container form{
+    position: absolute;
+    inset:4px;
+    background: white;
+    padding: 50px 40px;
+    border-radius: 8px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInUp 0.5s ease-in-out;
+ 
+
+}
+
+.container form h2{
+    color:black;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+.container form .input-box{
+    position: relative;
+    max-width: 480px;
+    margin-top: 35px;
+    width: 100%;
+
+}
+.container form .btn {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.6em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    font: bold;
+    color: white;
+
+}
+.btn{
+    padding: 8px 20px !important;
+    font-size: 15px !important;
+    margin: 0 auto;
+    font-family: '';
+    font-family: 'Prompt', sans-serif !important;
+    border-radius: 8px !important;
+    width: 40% !important;
+    margin-top: 10px !important;
+}
+
+.container form .input-box input{
+    position: relative;
+    width: 100%;
+    padding: 20px 10px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    box-shadow: none;
+    color: #000000;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+    z-index: 10;
+
+}
+.container form .input-box label {
+    position: absolute;
+    left: 0;
+    padding: 20px 0px 10px;
+    pointer-events: none;
+    color: #8f8f8f;
+    font-size: 1em;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+
+
+.container form .input-box input:focus ~ label {
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+    transform: translateY(-34px);
+}
+
+.container form .input-box input:not(:placeholder-shown) ~ label {
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+    transform: translateY(-34px);
+}
+
+
+input::placeholder {
+    color: #999; /* สีของ placeholder */
+    font-size:13px;
+}
+
+/* เลือก placeholder ใน textarea */
+textarea::placeholder {
+    color: #777;
+    
+
+}
+
+/* เลือก placeholder ของ select */
+select::placeholder {
+    color: #888;
+
+}
+.input-box .o i {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: rgb(188, 188, 188);
+    border-radius: 4px;
+    overflow: hidden;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container form .input-box i {
+   color: #000000;
+}
+
+.container form .input-box input:focus ~ .o i{
+
+    height: 40px;
+
+}
+.container form .link{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+
+.container form .link a{
+
+    font-size: 0.9em;
+    color: black;
+    text-decoration: none;
+    margin: 0 auto;
+}
+.container form .link a{
+    width: max-content;
+    position: relative;
+    cursor: pointer;
+}
+.link a::after{
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    background-color: #272727;
+    transition: 0.3s;
+    transition-timing-function: easy-in-out;
+    transform: scaleX(0)
+}
+.link a:hover::after
+{
+    transform: scaleX(1)
+}
+
+.container form .link a:hover,
+.container form .link a:nth-child(2){
+    color: black;
+}
+
+.container form .btn {
+    border: none;
+    outline: none;
+    padding: 9px 25px;
+    background: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 0.6em;
+    border-radius: 4px;
+    font-weight: 600;
+    width: 100px;
+    margin-top: 10px;
+    font: bold;
+    color: white;
+
+}
+
+/*--------------------------------------------------------------
+# Preloader
+--------------------------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    overflow: hidden;
+    background: #151515;
+  }
+  
+  #preloader:before {
+    content: "";
+    position: fixed;
+    top: calc(50% - 0px);
+    left: calc(50% - 30px);
+    border: 6px solid #ffffff;
+    border-top-color: #151515;
+    border-bottom-color: #151515;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: animate-preloader 1s linear infinite;
+  }
+  
+  @keyframes animate-preloader {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+/*--------------------------------------------------------------
+# หน้าจอสำหรับโทรศัพท์
+--------------------------------------------------------------*/
+
+
+@media screen and (max-width: 600px) {
+
+    body{
+      min-height: auto;
+        
+    }
+
+    .font-header h1{
+        font-size: 20px; /* ขนาดตั้งต้นของตัวหนังสือ */
+        max-width: 100%; /* ไม่ให้ขนาดของตัวหนังสือเกิน container */
+        width: 100%; /* ทำให้ตัวหนังสือเต็ม container */
+        margin-top: 50px;
+
+    }
+    .container{
+        margin-top: 50px;
+    }
+}
