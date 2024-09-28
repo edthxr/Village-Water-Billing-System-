@@ -166,15 +166,25 @@ $previous_reading_previous_user = $previousReadingResult ? $previousReadingResul
                 <?php
                 // ตรวจสอบว่ามีข้อมูล current_reading หรือไม่
                 if ($previousReadingResult && isset($previousReadingResult['current_reading'])) {
+
                     // มีข้อมูล current_reading ให้แสดงค่านั้น
                     echo '<input type="number" id="previous_reading" name="previous_reading" value="' . $previousReadingResult['current_reading'] . '" readonly>';
                 } else {
-                    // ไม่มีข้อมูล current_reading ให้ใส่ค่าเริ่มต้นหรือว่าง
-                    echo '<input type="number" id="previous_reading" name="previous_reading" value="" placeholder="0" required>';
+                    // ไม่มีข้อมูล current_reading ให้ใส่ค่าเริ่มต้นเป็น 0
+                    echo '<input type="number" id="previous_reading" name="previous_reading" value="0" required>';
                 }
+
                 ?>
             </div>
-
+            <script>
+                if (previousReading == 0 && currentReading > 0) {
+                    // ถ้าเป็นการบันทึกครั้งแรก ให้ผู้ใช้สามารถกรอกค่าปัจจุบันได้
+                    document.getElementById('previous_reading').disabled = false; // เปิดให้กรอกได้
+                } else {
+                    // ปิดการกรอกเมื่อไม่เป็นการบันทึกครั้งแรก
+                    document.getElementById('previous_reading').disabled = true;
+                }
+            </script>
 
 
 
@@ -260,36 +270,52 @@ $previous_reading_previous_user = $previousReadingResult ? $previousReadingResul
 
                 var showAlert = true;
                 document.getElementById('saveLink').addEventListener('click', function (event) {
-    event.preventDefault(); // ยกเลิกการทำงานปกติของลิงก์
+                    event.preventDefault(); // ยกเลิกการทำงานปกติของลิงก์
 
-    var previousReading = parseFloat(document.getElementById('previous_reading').value) || 0;
-    var currentReading = parseFloat(document.getElementById('current_reading').value) || 0;
+                    var previousReading = parseFloat(document.getElementById('previous_reading').value) || 0;
+                    var currentReading = parseFloat(document.getElementById('current_reading').value) || 0;
 
-    if (previousReading > currentReading) {
-        // แสดงข้อความแจ้งเตือนว่าค่ามิเตอร์เดือนก่อนต้องไม่มากกว่าค่ามิเตอร์ปัจจุบัน
-        Swal.fire({
-            icon: 'warning',
-            title: 'คำเตือน',
-            text: 'ค่ามิเตอร์เดือนก่อนต้องไม่มากกว่าค่ามิเตอร์ปัจจุบัน',
-        });
-    } else {
-        // แสดงกล่องยืนยัน
-        Swal.fire({
-            title: 'ยืนยันการบันทึกข้อมูล',
-            text: 'กรุณาตรวจสอบข้อมูลให้ถูกต้องก่อนที่จะกดบันทึก',
-            icon: 'info',
-            showCancelButton: true,
-            confirmButtonText: 'บันทึก',
-            cancelButtonText: 'ยกเลิก'
-        }).then((result) => {
-            if (result.isConfirmed) {
-                // ทำการบันทึกหลังจากผู้ใช้ยืนยัน
-                saveFunction();
-            }
-        });
-    }
-});
+                    // ตรวจสอบค่าของ previous_reading
+                    if (previousReading === 0) {
+                        // แสดงข้อความแจ้งเตือนว่าผู้ใช้ต้องกรอกค่าที่มากกว่า 0
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'คำเตือน',
+                            text: 'โปรดกรอกข้อมูลให้เรียบร้อย',
+                        });
+                        return; // หยุดการทำงานของฟังก์ชัน
+                    }
 
+                    // ตรวจสอบว่าค่ามิเตอร์เดือนก่อนต้องไม่มากกว่าค่ามิเตอร์ปัจจุบัน
+                    if (previousReading > currentReading) {
+                        Swal.fire({
+                            icon: 'warning',
+                            title: 'คำเตือน',
+                            text: 'ค่ามิเตอร์เดือนก่อนต้องไม่มากกว่าค่ามิเตอร์ปัจจุบัน',
+                        });
+                        return; // หยุดการทำงานของฟังก์ชัน
+                    }
+
+                    // แสดงกล่องยืนยัน
+                    Swal.fire({
+                        title: 'ยืนยันการบันทึกข้อมูล',
+                        text: 'กรุณาตรวจสอบข้อมูลให้ถูกต้องก่อนที่จะกดบันทึก',
+                        icon: 'info',
+                        showCancelButton: true,
+                        confirmButtonText: 'บันทึก',
+                        cancelButtonText: 'ยกเลิก'
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // ทำการบันทึกหลังจากผู้ใช้ยืนยัน
+                            saveFunction();
+                        }
+                    });
+                });
+
+                // ฟังก์ชันสำหรับการบันทึก
+                function saveFunction() {
+                    document.querySelector('form').submit(); // ส่งฟอร์ม
+                }
 
 
                 // เพิ่มเงื่อนไขตรวจสอบว่ามีข้อความแจ้งเตือนหรือไม่
