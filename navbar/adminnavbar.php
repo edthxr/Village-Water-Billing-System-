@@ -79,7 +79,7 @@
 
             <ul>
                 <li>
-                    <a href="admin.php">WELCOME</a>
+                    <a href="admin.php">ADMIN</a>
                 </li>
                 <li class="hideOnMoblie">
                     <a href="admin.php">หน้าหลัก</a>

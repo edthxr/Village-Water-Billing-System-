@@ -8,7 +8,7 @@ body {
     min-height: 100vh !important;
     margin: 0;
     /* Remove default body margin */
-    background: #F5f5f7 !important;
+    background: #111111 !important;
     overflow-x: hidden;
     /* Prevent horizontal scrolling */
     display: flex;
@@ -34,7 +34,7 @@ body {
     margin-top: 25px !important;
     padding: 50px 15% 10px;
     color: #777;
-    background: #FFFFFF !important;
+    background: #181818 !important;
     margin-top: auto;
 
     border-top: 1px solid rgba(149, 149, 149, 0.5);
@@ -121,7 +121,7 @@ body {
     }
 }
 .welcome h2 {
-    color: #ffd700; /* สีทอง Lamborghini */
+    color: #FFFFFF; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -129,7 +129,7 @@ body {
     margin-bottom: 80px;
     margin-top: 10px;
     font-size: 24px;
-    background-color: black;
+
     padding: 50px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* เพิ่มเงา */
 }
@@ -217,7 +217,7 @@ body {
     width: 90% !important;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 8px rgb(255, 241, 241);
+  
     border: 2px solid rgb(255, 255, 255);
     margin: 0 auto;
     margin-bottom: 15px;

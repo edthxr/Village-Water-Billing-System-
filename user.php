@@ -120,7 +120,7 @@ if (isset($_GET['logout_success'])) {
             </ul>
           </li>
           <li><a class="nav-link scrollto" href="#services">Contact</a></li>
-          <li><a class="nav-link scrollto" href="#team">problem report</a></li>
+         
 
           </li>
         </ul>

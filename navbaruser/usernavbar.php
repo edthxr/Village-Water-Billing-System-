@@ -64,7 +64,7 @@
 
             <ul>
                 <li>
-                    <a href="user.php">WELCOME</a>
+                    <a href="user.php">USER</a>
                 </li>
                 <li class="hideOnMoblie">
                     <a href="user.php">หน้าหลัก</a>

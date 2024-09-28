@@ -74,7 +74,7 @@ if (isset($_GET['logout'])) {
 
       <!-- Profile-->
 
-      <h1 class="logo me-auto me-lg-0"><a>Wel<span>Come</span></a></h1>
+      <h1 class="logo me-auto me-lg-0"><a>Ad<span>Min</span></a></h1>
 
 
       <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -109,7 +109,7 @@ if (isset($_GET['logout'])) {
             </ul>
           </li>
           <li><a class="nav-link" href="#contactSection">Contact</a></li>
-          <li><a class="nav-link scrollto" href="#team">แจ้งปัญหา</a></li>
+         
 
           </li>
         </ul>
@@ -136,7 +136,7 @@ if (isset($_GET['logout'])) {
         </div>
       </div>
 
-      <div class="row gy-4 mt-5 justify-content-center">
+      <div class="row gy-4 mt-5 justify-content-center mb-5">
         <div class="col-xl-2 col-md-4">
           <div class="icon-box">
             <a href="user_list.php">

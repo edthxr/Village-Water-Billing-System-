@@ -135,7 +135,7 @@ l
 
     <div class="user_details">
         <div class="font-header">
-            <h2><i class="bi bi-person-vcard custom-icon"></i>รายละเอียดผู้ใช้น้ำ</h2>
+            <h2><i class="bi bi-person-vcard custom-icon"></i>ข้อมูล</h2>
         </div>
         <div class="user_details1">
             <p class="form-column">ชื่อ :
